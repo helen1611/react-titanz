@@ -1,0 +1,598 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+@import "~bootstrap/scss/bootstrap";
+
+@import "./share/mixin.scss";
+@import "./share/variable.scss";
+@import "./share/type.scss";
+@import "./share/header.scss";
+@import "./share/footer.scss";
+
+body{
+  background-color: #181d20;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 500;
+  padding-top: 112px;
+  font-size: 16px;
+  scroll-behaviour: smooth;
+}
+.app-titanz{
+  h3{
+    font-size: 30px;
+    font-weight: 700;
+  }
+  h2{
+    font-size: 40px;
+  }
+  .container, .container-fluid, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* Header */
+.app-header{
+  padding: 0!important;
+  display: block!important;
+  &.navbar-light .navbar-nav .nav-link{
+    color: #fff;
+  }
+  .container{
+    position: relative;
+    display: block;
+  }
+  a.navbar-brand{
+    padding: 0 10px 0 0;
+  }
+  .header-content{
+    display: flex;
+    position: relative;
+    width: 100%;
+  }
+}
+
+.right-menu{
+  text-align: center;
+  .power-by{
+    position: absolute;
+    right: 0;
+  }
+  .center-menu{
+    margin: 0 auto;
+    a.nav-link{
+      display: inline-block;
+      padding: 0 2.1rem;
+    }
+  }
+}
+@media screen and (max-width: 991px){
+  .right-menu {
+    .power-by{
+      position: relative;
+      float: right;
+    }
+    .center-menu {
+
+    }
+  }
+}
+.header-ribbon{
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #EB8C57;
+  font-weight: 500;
+  color: #111111;
+  span{
+    color: #fff;
+    padding: 0 5px;
+    min-width: 52px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 991px) {}
+@media screen and (max-width: 767px) {
+  body{
+    padding-top: 143px;
+  }
+  .header-ribbon {
+    display: block;
+    height: inherit;
+    padding: 16px;
+    width: 100%;
+    text-align: center;
+  }
+  .app-header .container{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .app-header a.navbar-brand{
+    padding-right: 0;
+  }
+  .app-header.navbar-light .navbar-nav .nav-link{
+    padding: 0 10px 0 0;
+    font-size: 14px;
+    &:last-child{
+      padding-right: 0;
+    }
+  }
+  .power-by{
+    font-size: 12px;
+    img{
+      width: 75%;
+    }
+  }
+  .right-menu .center-menu{
+    padding-top: 20px;
+  }
+}
+
+
+
+// Hero Section
+.hero-section{
+  padding: 10rem 0;
+  .container{
+    display: flex;
+  }
+}
+.hero-left{
+  text-align: left;
+  display: flex;
+  align-items: center;
+  padding-right: 50px;
+}
+.hero-right{
+  flex-shrink: 0;
+  width: 45%;
+  max-width: 500px;
+}
+.hero-img{
+  border-radius: 7px;
+  width: 100%;
+}
+.hero-title{
+  font-size: 24px;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+.hero-cta{
+  margin-bottom: 25px;
+}
+.btn-titanz{
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 50px;
+  background: #F3B759;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: none;
+  border: none;
+  color: #181D20;
+  &:hover,&:focus{
+    border-color: transparent;
+  }
+}
+.hero-description{
+  font-size: 18px;
+  font-weight: 400;
+  max-width: 330px;
+}
+.hero-label{
+  margin-top: 16px;
+  padding: 2.4rem 1.6rem;
+  background-color: #000;
+  font-weight: bold;
+  font-size: 25px;
+  span{
+
+
+  }
+}
+.hero-brand{
+  color: #F3B759;
+}
+.series{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 991px) {
+  .hero-section{
+    .container{
+      display: block;
+    }
+  }
+  .hero-left,.hero-right{
+      width: 100%;
+  }
+  .hero-left{
+    padding-right: 0;
+    margin-bottom: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .hero-section{
+    padding: 50px 0;
+  }
+  .app-titanz h2, .app-titanz .h2{
+    font-size: 30px;
+  }
+  .series{
+    font-size: 20px;
+  }
+}
+
+//exchange-section
+.exchange-section{
+  background: linear-gradient(90deg, #111111 0%, #242424 53.67%, #1E1E1E 100%);
+  padding: 32px 0;
+  &__content{
+    display: flex;
+  }
+  &__label{
+    margin-right: 55px;
+    max-width: 398px;
+  }
+  &__logo{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    a{
+
+    }
+  }
+}
+.logo-item{
+  display: inline-flex;
+  margin: 10px 25px;
+}
+@media screen and (max-width: 991px) {
+  .exchange-section__content{
+    display: block;
+  }
+  .exchange-section__label{
+    width: 100%;
+    max-width: 100%;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    margin-bottom: 24px;
+  }
+  .exchange-section__logo{
+    justify-content: flex-start;
+  }
+  .logo-item{
+    margin: 10px 50px 10px 0;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}
+@media screen and (max-width: 767px) {}
+
+
+
+//road map - section
+.roadmap-section{
+  padding: 106px 0;
+  position: relative;
+  &__content{
+    text-align: center;
+  }
+  &__in{
+    position: relative;
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: flex;
+    height: 287px;
+  }
+  &__title{
+    text-align: center;
+    margin-bottom: 32px;
+  }
+}
+.roadmap-id,.roadmap-detail{
+  padding: 0 12px;
+  overflow-y: auto;
+  .roadmap-ct{
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    padding: 16px 24px;
+  }
+}
+.roadmap-id{
+  width: 36%;
+  flex-shrink: 0;
+}
+.roadmap-detail{
+  width: 100%;
+  flex-shrink: 1;
+  .roadmap-ct{
+    padding: 32px 24px;
+  }
+}
+.ul-roadmap{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  > li{
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 8px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    &.active{
+      color: #fff;
+      background-color: #F3B759;
+    }
+  }
+}
+.ul-roadmap-detail{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  max-height: 248px;
+  overflow-y: auto;
+
+
+  > li{
+    padding: 16px 24px;
+    font-size: 18px;
+    text-align: left;
+  }
+  .rm-lbl{
+    font-weight: 700;
+    color: #F3B759;
+  }
+}
+.roadmap-detail-item{
+  display: none;
+  &.active{
+    display: block;
+  }
+  > *{
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+@media screen and (max-width: 991px) {
+  .roadmap-section__content{
+    padding-bottom: 0;
+    height: auto;
+  }
+  .roadmap-section__in{
+    display: block;
+    height: auto;
+  }
+  .roadmap-id{
+    width: 100%;
+    padding: 0;
+    margin-bottom: 16px;
+  }
+  .roadmap-ct{
+    overflow-y: auto;
+  }
+  .roadmap-id{
+    width: 100%;
+    padding: 0;
+    margin-bottom: 16px;
+    .roadmap-ct{
+      max-height: inherit;
+    }
+  }
+  .roadmap-detail{
+    width: 100%;
+    padding: 0;
+    margin-bottom: 0;
+  }
+  .ul-roadmap-detail{
+    max-height: inherit;
+  }
+  .ul-roadmap-detail > li{
+    padding: 16px 0;
+  }
+  .ul-roadmap{
+    display: flex;
+    flex-wrap: wrap;
+    > li{
+      width: 50%;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .roadmap-section{
+    padding: 50px 0;
+  }
+  .roadmap-section__content{
+    height: auto;
+    &:before{
+      left: 20px;
+    }
+  }
+  .roadmap-item{
+    display: block;
+    padding-left: 30px;
+    max-height: inherit;
+    margin-bottom: 30px;
+  }
+
+
+}
+
+
+//social - section
+.social-section{
+  padding: 0 0 106px;
+  position: relative;
+  &__content{
+    text-align: center;
+    margin-left: -12px;
+    margin-right: -12px;
+    width: auto;
+  }
+  &__title{
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  &__in{
+    position: relative;
+    max-width: 950px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: flex;
+  }
+  &__item{
+    width: 50%;
+    padding: 0 12px;
+  }
+}
+.social-name{
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .social-section{
+    padding-bottom: 50px;
+    &__content{
+      margin-left: 0;
+      margin-right: 0;
+    }
+    &__in{
+      display: block;
+    }
+    &__item{
+      width: 100%;
+      padding: 0;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+
+//faq - section
+.faq-section{
+  margin-bottom: 72px;
+  &__content{
+    max-width: 926px;
+    margin: 0 auto;
+    display: block;
+  }
+  &__label{
+    width: 100%;
+    margin-right: 50px;
+    flex-shrink: 0;
+    text-align: center;
+    h3{
+      font-weight: 700;
+    }
+  }
+}
+.accordion{
+  .accordion-item{
+    background: transparent;
+    border-bottom: 1px dashed rgba(132, 132, 132, 0.1);
+    .accordion-header{
+      padding: 24px;
+      font-size: 16px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.5);
+      display: block;
+      .accordion-button{
+        padding: 0;
+        font-size: 16px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.5);
+        box-shadow: none;
+        background-color: transparent;
+      }
+    }
+    .accordion-collapse{
+      padding: 0 24px 24px;
+      .accordion-body{
+        padding: 0;
+        color: #fff;
+      }
+    }
+  }
+  .accordion-button:after{
+    display: none;
+  }
+  .accordion-button:not(.collapsed){
+      color: #DEF285 !important;
+  }
+}
+.focusClass .roadmap-section__content{
+  height: auto;
+}
+@media screen and (max-width: 991px) {
+  .faq-section__label{
+    width: 100%;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .faq-section__content{
+    display: block;
+  }
+  .accordion {
+    .accordion-item {
+      .accordion-header{
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .accordion-collapse{
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+
+//Footer
+.app-footer{
+  padding: 16px 0;
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.footer-social{
+  a{
+    display: inline-block;
+    margin-left: 18px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .app-footer{
+    .container{
+      span{
+        max-width: 60%;
+      }
+    }
+  }
+  .footer-social{
+    a{
+      margin-left: 8px;
+    }
+  }
+}
